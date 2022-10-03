@@ -134,7 +134,9 @@ function getStaff() {
 // gọi hàm getdata chạy 
 
     
-getStaff();
+window.onload = function () {
+    getStaff();
+}
 
 
 
@@ -220,9 +222,8 @@ function searchStaff() {
         if (staffAccount === keyWord || staffRank.includes(keyWord) || staffName.includes(keyWord)) {
             result.push(staffList[i]);
         }
-
+        
     }
-    console.log(staffRank)
     // render kết quả ra giao diện
     renderStaff(result);
 
